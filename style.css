@@ -1,0 +1,340 @@
+* {
+    margin: 0;
+    padding: 0;
+  }
+  /* link color */
+  :root {
+    --link-blue: rgb(0, 103, 184);
+  }
+  body {
+    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  }
+  /* header will be 3 parts, middle will have flexible width, left and right with fixed widths */
+  header {
+    display: flex;
+    background-color: white;
+    padding: 0 4vw;
+    gap: 1vw;
+    font-size: 0.8rem;
+    height: 8vh;
+    align-items: center;
+  }
+  header img {
+    width: 7vw;
+  }
+  .header-left {
+    width: 10vw;
+  }
+  .header-middle {
+    flex: 1;
+  }
+  .header-right {
+    width: 22vw;
+  }
+  /* for icons */
+  .header-right a {
+    position: relative;
+  }
+  .header-right img {
+    width: 20px;
+    position: absolute;
+    right: -25px;
+  }
+  header ul {
+    display: flex;
+    gap: 1.5vw;
+  }
+  .header-right ul {
+    gap: 3vw;
+  }
+  header a:hover,
+  .offer a:hover {
+    border-bottom: 2px solid black;
+    height: 1.25rem;
+  }
+  footer a:hover {
+    border-bottom: 1px solid black;
+    height: 1.25rem;
+  }
+  a {
+    text-decoration: none;
+    color: black;
+  }
+  .benefits {
+    display: flex;
+    padding: 8vh 0;
+    margin-top: 6vh;
+    gap: 5vw;
+    justify-content: center;
+    background-color: rgb(242, 242, 242);
+  }
+  .benefits img {
+    width: 2vw;
+    position: absolute;
+    left: -3vw;
+  }
+  /* for icons */
+  .benefit-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+  }
+  .benefit-item p {
+    font-size: 1.7rem;
+    width: 15vw;
+    position: relative;
+    font-weight: 600;
+  }
+  .benefits-link {
+    background-color: rgb(242, 242, 242);
+    justify-content: center;
+    display: flex;
+    padding-bottom: 3vh;
+  }
+  .benefits-link a {
+    font-size: 1.1rem;
+    color: var(--link-blue);
+    font-weight: 600;
+  }
+  .benefits-link a:hover {
+    border-bottom: 2px solid var(--link-blue);
+    height: 1.4rem;
+  }
+  
+  ul {
+    list-style-type: none;
+  }
+  main {
+    padding: 5vh 6vw;
+  }
+  .offer {
+    background-color: rgb(155, 240, 11);
+    font-weight: 600;
+    height: 8vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .banner1 {
+    background-image: url(images/banner1.avif);
+  }
+  .banner1,
+  .banner2,
+  .banner3 {
+    height: 60vh;
+    background-size: cover;
+    background-position: center;
+  }
+  .banner1-text,
+  .banner2-text,
+  .banner3-text {
+    height: 60vh;
+    width: 30vw;
+    padding-left: 8vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 3vh;
+  }
+  .banner2-text {
+    width: 20vw;
+  }
+  .banner2 {
+    width: 86vw;
+    margin: 15vh 0;
+    background-image: url(images/Highlight-MultiCanvas-Microsoft-Copilot-App-3screens_VP5-1596x600.avif);
+  }
+  .banner2 .banner-link {
+    background-color: var(--link-blue);
+  }
+  .banner3 {
+    width: 86vw;
+    margin: 15vh 0;
+    color: white;
+    background-image: url(images/Highlight-Sustainability-AI-Bioacoustics-Scarlet-Macaw_VP5-1596x600.avif);
+  }
+  .banner3-text {
+    margin-left: 45vw;
+    width: 22vw;
+  }
+  
+  .banner-link:hover {
+    background-color: #005a9a;
+  }
+  .main-text {
+    font-size: 2rem;
+    font-weight: 600;
+  }
+  .banner-link {
+    background: var(--link-blue);
+    color: white;
+    width: max-content;
+    font-weight: 600;
+    padding: 0.7vw;
+  }
+  .shopping {
+    display: flex;
+    margin-bottom: 10vh;
+    justify-content: center;
+    gap: 4vw;
+  }
+  .shopping div {
+    text-align: center;
+  }
+  .shopping img {
+    width: 40px;
+  }
+  .shopping a {
+    text-decoration: underline;
+    color: var(--link-blue);
+    font-weight: 600;
+  }
+  .products,
+  .products-ai {
+    display: grid;
+    grid-template-columns: repeat(4, 20vw);
+    width: 90vw;
+    margin: auto;
+    position: relative;
+    gap: 2vw;
+  }
+  .products img,
+  .products-ai img {
+    width: 20vw;
+    height: max-content;
+  }
+  /* shadow border for cards */
+  .products article,
+  .products-ai article {
+    width: 20vw;
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.2);
+  }
+  /* only 3 cards */
+  .products-ai article {
+    width: 28vw;
+  }
+  .products-ai img {
+    width: 28vw;
+  }
+  .products-main-text {
+    font-weight: 600;
+    font-size: 1.8rem;
+  }
+  .products-text {
+    margin-top: 1vh;
+    padding: 0 2vw;
+    display: flex;
+    gap: 2vh;
+    flex-direction: column;
+  }
+  /* for extra link */
+  .products article :has(.banner-2nd-link) .banner-link {
+    bottom: 7vh;
+  }
+  .products .banner-2nd-link {
+    position: absolute;
+    bottom: 3vh;
+    color: #005a9a;
+    font-weight: 600;
+  }
+  .banner-2nd-link:hover {
+    border-bottom: 2px solid var(--link-blue);
+    height: 1.25rem;
+  }
+  .banner-2nd-link::after,
+  .benefits-link a::after,
+  .offer a::after {
+    content: " ˃";
+    color: var(--link-blue);
+    transition: 0.2s;
+  }
+  .offer a::after {
+    color: #000;
+  }
+  .banner-2nd-link:hover::after,
+  .benefits-link a:hover::after,
+  .offer a:hover::after {
+    margin-left: 2px;
+  }
+  .products .banner-link,
+  .products-ai .banner-link {
+    position: absolute;
+    bottom: 2vh;
+  }
+  .products-ai article {
+    height: 75vh;
+  }
+  .products-ai {
+    grid-template-columns: repeat(3, 27vw);
+    position: relative;
+  }
+  .follow {
+    display: flex;
+    align-items: center;
+    gap: 1vw;
+  }
+  .back-btn {
+    margin-left: auto;
+    font-weight: 600;
+    border: none;
+    cursor: pointer;
+    padding: 10px 20px;
+    background-color: #e1e1e1;
+  }
+  .back-btn:hover {
+    background-color: white;
+  }
+  .follow img {
+    width: 2vw;
+  }
+  footer {
+    background-color: #f2f2f2;
+    padding: 2vw 5vw;
+  }
+  
+  .footer-container {
+    display: flex;
+    gap: 6vw;
+  }
+  .footer-section {
+    padding-bottom: 5vh;
+  }
+  .footer-section h4 {
+    font-size: 0.9rem;
+    color: #5e5e5e;
+    font-weight: 600;
+    margin-bottom: 2vh;
+  }
+  .footer-section ul {
+    display: flex;
+    flex-direction: column;
+    gap: 1vh;
+  }
+  
+  .footer-section ul li a {
+    text-decoration: none;
+    color: #5e5e5e;
+    font-size: 0.7rem;
+  }
+  .footer-bottom {
+    border-top: 1px solid #ddd;
+    padding-top: 2vh;
+    font-size: 0.7rem;
+    display: flex;
+  }
+  
+  .footer-bottom ul {
+    display: flex;
+    gap: 2vw;
+  }
+  
+  .footer-bottom ul li a {
+    text-decoration: none;
+    color: #595959;
+    transition: color 0.3s;
+  }
+  .footer-bottom :nth-child(3) {
+    margin-right: 9vw;
+  }
+  
